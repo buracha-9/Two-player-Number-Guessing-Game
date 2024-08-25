@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two-Player Number Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Two-Player Number Guessing Game</h1>
+        <div id="setup">
+            <h2>Player 1: Set Your Number</h2>
+            <input type="password" id="player1Input" maxlength="4">
+            <button id="setPlayer1">Set Player 1 Number</button>
+
+            <h2>Player 2: Set Your Number</h2>
+            <input type="password" id="player2Input" maxlength="4">
+            <button id="setPlayer2">Set Player 2 Number</button>
+        </div>
+        <div id="game" style="display: none;">
+            <h2>Guessing Phase</h2>
+            <p id="currentPlayerMessage"></p>
+            <input type="text" id="guessInput" maxlength="4">
+            <button id="guessButton">Guess</button>
+
+            <h3>Guess History</h3>
+            <div id="guessHistory">
+                <div class="playerColumn">
+                    <h4>Player 1</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Guess</th>
+                                <th>Number</th>
+                                <th>Position</th>
+                            </tr>
+                        </thead>
+                        <tbody id="player1History"></tbody>
+                    </table>
+                </div>
+                <div class="playerColumn">
+                    <h4>Player 2</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Guess</th>
+                                <th>Number</th>
+                                <th>Position</th>
+                            </tr>
+                        </thead>
+                        <tbody id="player2History"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <button id="resetButton" style="display: none;">Play Again</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
